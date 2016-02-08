@@ -22,3 +22,5 @@ And you can then use logcat to check that the call went through:
 D/OpersysNativeService(  877): *************** writeValue() called with value 12341351 *******************
 ...
 
+Karim Yaghmour
+karim.yaghmour@opersys.com

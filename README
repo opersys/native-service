@@ -1,0 +1,24 @@
+DO NOT COPY the build/target/product/core.mk as-is to your tree.
+Just copy the following from it:
+PRODUCT_PACKAGES += \
+...
+    libopersysnativemgriface \
+    libopersysnativeservice \
+    opersysnativeservice
+...
+
+You can run the system service on your target by doing this:
+# opersysnativeservice &
+
+You can use this to check that it runs:
+# service list
+
+You can then call on it directly:
+# service call opersysnativeservice 1 i32 2313423
+or
+# service call opersysnativeservice 2 i32 12341351
+And you can then use logcat to check that the call went through:
+....
+D/OpersysNativeService(  877): *************** writeValue() called with value 12341351 *******************
+...
+
